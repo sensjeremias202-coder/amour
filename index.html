@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pour Mon Amour</title>
-    <!-- Corrigi o link das fontes para o francês funcionar com estilo -->
     <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
-        /* Mantendo seu estilo original com o toque romântico */
         * {
             margin: 0;
             padding: 0;
@@ -96,6 +94,18 @@
             margin-top: 1rem;
         }
 
+        .music-player {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+
+        audio {
+            height: 35px;
+            opacity: 0.6;
+            filter: sepia(20%) saturate(70%) grayscale(1);
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
@@ -126,6 +136,17 @@
         </div>
 
         <div class="heart">❤</div>
+
+        <!-- PLAYER DE MÚSICA -->
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="amour.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+            <p style="font-size: 0.7rem; color: #666; margin-top: 5px;">
+                ♫ Je l'aime à mourir - Francis Cabrel
+            </p>
+        </div>
     </div>
 
 </body>
